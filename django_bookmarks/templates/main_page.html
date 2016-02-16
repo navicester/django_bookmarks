@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Welcome to Django Bookmarks {% endblock%}
+{% block head %} Welcome to Django Bookmarks {% endblock%}
+{% block content %}
+
+</script>
+
+    {% if user.username %}
+        <p>Welcom {{ user.username }} ! Here you can store and share bookmarks </p>
+    {% else %}
+        <p>Welcome anonymous user! you need to <a href=/login/>login</a> 
+        before you can store and share bookmarks. </p> 
+    {% endif %}
+    
+    <a href = "/dropdownmenu">Dropdownmenu</a><br>
+    <a href = "/index/left">box-index-left</a><br>
+
+{% endblock%}
