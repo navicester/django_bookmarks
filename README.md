@@ -33,7 +33,21 @@ Django术语中的view是一个普通python函数，它通过生成响应页面�
 
 现在，我们开始创建主页试图。打开文件bookmarks/views.py，并输入下面代码
 ``` python
-from django.http import HttpResponsedef main_page(request): output = u''' <html> <head><title>%s</title></head> <body> <h1>%s</h1><p>%s</p> </body> </html> ''' % (  u'Django Bookmarks',  u'Welcome to Django Bookmarks',  u'Where you can store and share bookmarks!'  ) return HttpResponse(output)
+from django.http import HttpResponse
+def main_page(request):
+	output = u'''
+	<html>
+	<head><title>%s</title></head>
+	<body>
+	<h1>%s</h1><p>%s</p>
+	</body>
+	</html>
+	''' % (
+		u'Django Bookmarks',
+		u'Welcome to Django Bookmarks',
+		u'Where you can store and share bookmarks!'
+		)
+	return HttpResponse(output)
 ```
 
 代码很短，我们一行一行来看一下：
