@@ -74,6 +74,37 @@ include('django_bookmarks.foo.urls')),
 ```
 这个表叫做URL样式，它一开始包含了一些入库，但都被注释了。每个入口都是一个Python元组，由URL和它的视图组成。
 
+URL语法使用了正则表达式，所以对你来说也不会陌生。通过这种方式，Django提供了很大的灵活性，我们会逐步学习如何去使用它。
+
+我们首先给主页添加入口URL
+``` python
+from django.conf.urls.defaults import *
+from bookmarks.views import *
+urlpatterns = patterns('',
+	(r'^$', main_page),
+	)
+```
+我们来分解一下这个代码
+- 文件从django.conf.urls.defualts模块导入所有内容，该模块包含了定义URL的必要函数。
+- 从bookmarks.views导入所有内容，这样就可以访问这些函数，并将它们关联到URL
+- pattern函数用于定义URL表，目前它只有一条映射记录。从```r'^$'```关联到视图```main_page```
+
+最后要说一下正则表达式，如果你之前没接触过的话，看起来会比较奇怪。它是一个raw字符串，包含两个字符r和^，定义一个raw字符串的python语法是r''。如果python碰到raw字符串，反斜杠和其他的字符串(escape sequences)会保持原样而不会被转译。这对正则表达式非常有用，因为它经常包含反斜杠。
+
+在正则表达式里，^表示字符串的开始，$表示结束。所以^$基本上不会包含任何内容，是一个空字符串。考虑到我们在写一个主页的视图，该页的URL是根URL，确实应该为空。
+
+re模块的python文档包含了正则表达式的详情。如果相对正则表达式有个透彻的理解，我建议你读一下改文档。它的在线地址为
+
+http://docs.python.org/lib/module-re.html
+
+下表是正则表达式的常用语法的总结：
+
+现在，我们可以测试我们的第一个视图了。启动开发服务器，访问 http://127.0.0.1:8000/ 就可以看到生成的主页了。
+
+祝贺你，你的第一个Django视图已经成功运行了。
+
+开始下一节之前，我们再来理解一下这些场景背后的一些内容：
+
 
 
 
