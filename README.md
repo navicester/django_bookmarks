@@ -129,6 +129,25 @@ http://docs.python.org/lib/module-re.html
 - 链接 (ID, URL)
 - 书签 (ID，标题，用户ID，链接ID)
 
+每个用户在User表里面都有自己的条目。这个条目存储了用户名，密码和邮箱ID。同样，每个链接在Link表里都有相应的条目。现在，我们只存储了链接的URL。
+
+对于Bookmarks表，你可以想象它是一个User和Link之间的连接表。当用户添加书签时，一个书签的URL条目将会添加到Link表里，同时一个连接条目添加到Bookmark表。这个条目连接了用户和链接，同时存储了用户为该书签设置的标题。
+
+将这些表的设计转为Python代码，我们需要修改bookmarks的models.py文件，添加各个对象的定义。models.py文件存储了数据库模型，当一开始manage.py startapp创建时，只有一个import行
+
+### 链接数据模型
+
+我们首先创建Links表的数据模型，这个最简单。打开bookmarks/models.py文件，添加下面代码
+``` python
+from django.db import models
+class Link(models.Model):
+	url = models.URLField(unique=True)
+```
+我们一行一行来学习这些代码
+- models包包含了定义模型需要的类，所以先导入它
+
+
+
 
 
 
