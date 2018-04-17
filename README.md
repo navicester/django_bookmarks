@@ -58,3 +58,27 @@ def main_page(request):
 Django view只是一个普通的Python函数。它把用户输入作为入参并返回页面输出。但是要看到这个视图输出，我们还需要将它关联到URL。
 因为各种原因，通常我们并不推荐这种内嵌的HTML代码片段方式。这儿只是为了演示简单。后面的章节中，我们会学习如果将HTML代码放到独立的文件中。
 
+### 创建主页URL
+
+回想一下上一章节，当我们创建项目时，它同时创建了urls.py文件。这个文件包含了我们的应用的URLs，并且将这些URL映射到视图上。
+我们来看一下这个文件的内容，并且学习如何去编辑它
+``` python
+from django.conf.urls.defaults import *
+urlpatterns = patterns('',
+# Example:
+# (r'^django_bookmarks/',
+include('django_bookmarks.foo.urls')),
+# Uncomment this for admin:
+# (r'^admin/', include('django.contrib.admin.urls')),
+)
+```
+这个表叫做URL样式，它一开始包含了一些入库，但都被注释了。每个入口都是一个Python元组，由URL和它的视图组成。
+
+
+
+
+
+
+
+
+
