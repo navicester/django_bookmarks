@@ -39,8 +39,4 @@ urlpatterns = patterns('',
     (r'^tag/([^\s]+)/$', tag_page),
     (r'^tag/$', tag_cloud_page),
 	(r'^search/$', search_page),
-    
-    # test
-    (r'^index/left/$', index_left),
-    (r'^dropdownmenu/$', dropdown_menu),    
 )

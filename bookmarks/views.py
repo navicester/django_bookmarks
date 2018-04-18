@@ -223,11 +223,3 @@ def search_page(request):
         
 def register_success(request):
     return render_to_response('registration/register_success.html', RequestContext(request))
-
-        
-def index_left(request):
-    return render_to_response('index_left.html', RequestContext(request))
-
-
-def dropdown_menu(request):
-    return render_to_response('dropdownmenu.html', RequestContext(request))
