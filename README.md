@@ -228,9 +228,75 @@ class Link(models.Model):
 
 
 
+# 高级浏览和搜索
 
+## 添加 RSS feeds
+### 创建最新的bookmarks feed
+### 创建用户bookmarks feed
+### 将feeds关联到HTML页
 
+## 高级搜索
+### 利用数据库API获取对象
+### 利用Q对象进行高级查询
+### 改善搜索特性
+### 分页
 
+# 创建用户网络
+## 建立朋友网络
+### 创建friendship数据模型
+### 在view里面管理朋友
+## 通过邮件邀请朋友
+### 邀请数据模型
+### 在form和view里邀请朋友
+### 处理激活链接
+
+# 扩展和部署
+## i18n
+### 将字符串设为可翻译
+### 创建翻译文件
+### 激活和配置i18n系统
+
+## 通过caching改善性能
+### 激活caching
+#### 本地内存缓存
+#### 数据库缓存
+#### 文件系统缓存
+#### memcahced
+
+## 配置缓存
+### 缓存整改站点
+### 缓存特定视图
+
+### 单元测试
+
+### 测试客户端
+
+### 测试注册视图
+
+## 部署django
+
+### 产品web server
+### 产品数据库
+
+### 关闭调试模式
+### 修改配置变量
+### 设置错误页
+
+# 下一步
+## 定制化模板tags和filters
+## model管理和SQL定制化
+## generic视图
+## contributed Framework
+### flatpages
+### siets
+### markup filters
+### humanize
+### sitemaps
+### CSRF
+
+## 消息系统
+## subscription系统
+## 用户打分
 
 
 
