@@ -135,7 +135,7 @@ http://docs.python.org/lib/module-re.html
 
 将这些表的设计转为Python代码，我们需要修改bookmarks的models.py文件，添加各个对象的定义。models.py文件存储了数据库模型，当一开始manage.py startapp创建时，只有一个import行
 
-### 链接数据模型
+### link(链接)数据模型
 
 我们首先创建Links表的数据模型，这个最简单。打开bookmarks/models.py文件，添加下面代码
 ``` python
@@ -145,6 +145,91 @@ class Link(models.Model):
 ```
 我们一行一行来学习这些代码
 - models包包含了定义模型需要的类，所以先导入它
+
+### user(用户)数据模型
+### bookmark(书签)数据模型
+
+## 模板 - 给主页创建模板
+
+## 合起来：生成用户页面
+### 创建 URL
+### 实现 View
+### 设计 Template
+### 给model填上数据
+
+# 用户注册和管理
+## 会话授权
+### 创建登录页面
+### 激活注销功能
+## 改善模板结构
+## 用户注册
+### django表单
+### 设计用户注册表单
+## 账户管理
+
+# 引入标签
+## 标签(tag)数据模型
+## 创建书签(bookmark)提交表单
+### 仅登录用户可访问
+### bookmark浏览方法
+### 改善用户页面
+### 创建tag页
+### 创建tag云
+## 安全简介
+### SQL注入
+### XSS (Cross-Site Scripting)
+
+# 利用AJAX增加用户接口
+## AJAX和它的优势
+## 在django中使用AJAX
+### 下载和安装JQuery
+## JQuery JS 框架
+### 元素选择器 Element Selector
+### JQuery 方法
+#### 显示和隐藏元素
+#### 访问CSS属性和HTML特性
+#### 操作HTML文件
+#### 遍历文件熟
+#### 处理事件
+#### 发送AJAX请求
+
+## 实现实时bookmarks搜索
+### 实现基本搜索
+### 实现实时搜索
+
+## 就地(in place)编辑书签
+### 实现基本书签编辑
+### 实现就地书籍编辑
+
+## Tag自动完成
+
+# 投票和评论
+## 主页上分享bookmarks
+### SharedBookmark数据模型
+### 修改书签提交表单
+### 浏览和给共享书签投票
+### 受欢迎的书签页
+
+## 书签评论
+### 激活评论应用
+### 创建评论视图
+### 显示评论内容和评论表单
+### 创建评论模板
+
+# 创建Administration接口
+## 激活Admin接口
+## 定制化Admin接口
+### 定制化列表页
+### 覆盖admin模板
+## user，groups和permission
+### 用户权限
+### 组权限
+### 在视图中使用权限
+
+
+
+
+
 
 
 
